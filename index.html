@@ -60,9 +60,9 @@
 
                 <h3 v-show="!tasks.length">NON CI SONO TASK</h3>
                 <div v-show="tasks.length" class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-primary">Segna tutti fatti</button>
-                    <button type="button" class="btn btn-primary">Segna tutti da fare</button>
-                    <button type="button" class="btn btn-primary">Elimina tutti</button>
+                    <button type="button" class="btn btn-primary" @click="setAll(true)">Segna tutti fatti</button>
+                    <button type="button" class="btn btn-primary" @click="setAll(false)">Segna tutti da fare</button>
+                    <button type="button" class="btn btn-primary" @click="clearAll()">Elimina tutti</button>
                 </div>
             </div>
 
