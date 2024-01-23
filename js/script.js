@@ -40,8 +40,11 @@ const app = createApp({
             this.tasks.push(task);
             this.newTaskText = '';
         },
-        searchTask(text) {
-            this.task
+        setAll(boolean) {
+            this.tasks.forEach(task => task.done = boolean);
+        },
+        clearAll() {
+            this.tasks = [];
         }
     }
 });
