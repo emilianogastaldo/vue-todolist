@@ -59,6 +59,11 @@
                 </ul>
 
                 <h3 v-show="!tasks.length">NON CI SONO TASK</h3>
+                <div v-show="tasks.length" class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary">Segna tutti fatti</button>
+                    <button type="button" class="btn btn-primary">Segna tutti da fare</button>
+                    <button type="button" class="btn btn-primary">Elimina tutti</button>
+                </div>
             </div>
 
         </div>
