@@ -14,11 +14,12 @@ const app = createApp({
     }),
     methods: {
         deleteTask(id) {
-            const filteredTasks = this.tasks.filter(task => {
-                if (task.id !== id) return true;
-                else return false;
-            })
-            this.tasks = filteredTasks;
+            this.tasks = this.tasks.filter(task => task.id !== id);
+            // const filteredTasks = this.tasks.filter(task => {
+            //     if (task.id !== id) return true;
+            //     else return false;
+            // })
+            // this.tasks = filteredTasks;
         }
     }
 });
