@@ -25,38 +25,11 @@
                 <h1 class="my-4">BOOLEAN TODO LIST</h1>
                 <h2>Cose da fare</h2>
                 <ul class="list-group w-50 mx-auto my-4">
-                    <li class="list-group-item d-flex justify-content-between">
+                    <li v-for="task in tasks" class="list-group-item d-flex justify-content-between">
                         <div class="form-check">
                             <label class="form-check-label">
                                 <input class="form-check-input" type="checkbox">
-                                {{tasks[0].text}}
-                            </label>
-                        </div>
-                        <button type="button" class="btn-close" aria-label="Close"></button>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between">
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox">
-                                Prova
-                            </label>
-                        </div>
-                        <button type="button" class="btn-close" aria-label="Close"></button>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between">
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox">
-                                Prova
-                            </label>
-                        </div>
-                        <button type="button" class="btn-close" aria-label="Close"></button>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between">
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox">
-                                Prova
+                                {{task.text}}
                             </label>
                         </div>
                         <button type="button" class="btn-close" aria-label="Close"></button>
