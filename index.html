@@ -22,18 +22,20 @@
 </head>
 
 <body>
-    <div id="root">
-        <div class="container">
-            <div class="text-center">
-                <h1 class="my-4">BOOLEAN TODO LIST</h1>
+    <header class="text-center">
+        <h1 class="my-4">BOOLEAN TODO LIST</h1>
+    </header>
+    <main class="w-50 mx-auto text-center">
+        <div id="root">
+            <div class="container">
                 <h2>Cose da fare</h2>
-                <div class="input-group w-50 mx-auto my-4">
+                <div class="input-group my-4">
                     <input type="text" class="form-control" placeholder="Ricerca un'attività" v-model.trim="searchText">
                     <button class="input-group-text">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
-                <ul class="list-group w-50 mx-auto my-4">
+                <ul class="list-group my-4">
                     <li v-for="task in filteredTasks" class="list-group-item d-flex justify-content-between">
                         <div class="form-check">
                             <label role="button" class="form-check-label">
@@ -58,16 +60,17 @@
                     </li>
                 </ul>
 
-                <h3 v-show="!tasks.length">NON CI SONO TASK</h3>
+                <h3 v-show="!filteredTasks.length">Non ci sono task <span v-show="searchText"> con
+                        "{{searchText}}"</span></h3>
                 <div v-show="tasks.length" class="btn-group" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-primary" @click="setAll(true)">Segna tutti fatti</button>
-                    <button type="button" class="btn btn-primary" @click="setAll(false)">Segna tutti da fare</button>
-                    <button type="button" class="btn btn-primary" @click="clearAll()">Elimina tutti</button>
+                    <button type="button" class="btn btn-success" @click="setAll(true)">Segna tutti fatti</button>
+                    <button type="button" class="btn btn-warning" @click="setAll(false)">Segna tutti da
+                        fare</button>
+                    <button type="button" class="btn btn-danger" @click="clearAll()">Elimina tutti</button>
                 </div>
             </div>
-
         </div>
-    </div>
 </body>
+</main>
 
 </html>
