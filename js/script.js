@@ -45,6 +45,8 @@ const app = createApp({
         },
         clearAll() {
             this.tasks = [];
+            this.searchText = '';
+            this.newTaskText = '';
         }
     }
 });
