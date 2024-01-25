@@ -30,12 +30,12 @@ const app = createApp({
             // })
             // this.tasks = filteredTasks;
         },
-        createNewTask(text) {
+        createNewTask() {
             // const newID = new Date()
             const task = {
                 id: new Date().toISOString(),
                 done: false,
-                text: text
+                text: this.newTaskText,
             };
             this.tasks.push(task);
             this.newTaskText = '';
